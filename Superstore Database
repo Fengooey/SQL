@@ -1,0 +1,15 @@
+--order items by price
+SELECT item_name, price
+FROM superstore 
+ORDER BY price ASC;
+--stat about item price 
+SELECT item_name, AVG(price) 
+FROM superstore 
+ORDER BY item_name;
+--stat about item price in the category kitchen supplies 
+SELECT item_name, MAX(price), category 
+FROM superstore
+WHERE category='Kitchen Supplies';
+--Come up with your own question 
+SELECT item_name, MIN(price), category
+FROM superstore;
