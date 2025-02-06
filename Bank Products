@@ -1,0 +1,15 @@
+-- show what products are included in the banking products table
+SELECT product_name
+FROM bank_products;
+--show what saving and checking products are available, also included sort by highest interest rate
+SELECT product_name, interest_rate
+FROM bank_products
+WHERE product_name IS "Savings Account" 
+OR product_name IS "Checking Account"
+ORDER BY interest_rate DESC;
+--find the best interest rate savings account with no monthly fee
+SELECT product_name, interest_rate, monthly_fee 
+FROM bank_products
+WHERE interest_rate >.74 
+AND monthly_fee IS "0"
+AND product_name IS "Savings Account";
